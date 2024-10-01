@@ -1,6 +1,11 @@
 # GRINext
 Proposed design and logical flow for GRINext business components.
-#mermaid
+
+```mermaid
+
+---
+Proposed BusinessLogic
+---
 sequenceDiagram
     par AccessionTrigger
     actor User
