@@ -1,22 +1,3 @@
-# GRINext
+# GRINext Business Components
 Proposed design and logical flow for GRINext business components.
 
-```mermaid
-
----
-Proposed BusinessLogic
----
-sequenceDiagram
-    par AccessionTrigger
-    actor User
-    User->>Accession: Delete
-    activate Inventory
-    Accession->>Inventory: Find(accession_id)
-    Inventory->>DB: Select(inventory_id)
-    alt exists
-    Inventory-->>Accession: Inventory
-    Accession->>Inventory: Delete(inventory_id)
-    Inventory->>DB: Delete(inventory_id)
-    end   
-    deactivate Inventory
-    end
